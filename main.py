@@ -13,7 +13,7 @@ redirect_url = "https://t.me/+fakVj-LnHhVhZTNi"
 @app.route('/<path:path>')
 def catch_all(path):
     current_time = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    user_ip = request.remote_addr
+    user_ip = request.headers.get('X-Real-IP', request.remote_addr)
     user_agent = request.headers.get('User-Agent')
     accept_language = request.headers.get('Accept-Language')
     print(f"{current_time} | {user_ip} | {accept_language} | {user_agent}")
