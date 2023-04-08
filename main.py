@@ -7,7 +7,7 @@ log = logging.getLogger('werkzeug')
 log.setLevel(logging.WARNING)  # Отключаем логирование от Flask (werkzeug)
 
 # Замените эту ссылку на ссылку, на которую вы хотите перенаправлять все GET-запросы
-redirect_url = "https://t.me/+fakVj-LnHhVhZTNi"
+redirect_url = "https://t.me/+zcxMTHSYKEYxZDcy"
 
 @app.route('/', defaults={'path': ''})
 @app.route('/<path:path>')
